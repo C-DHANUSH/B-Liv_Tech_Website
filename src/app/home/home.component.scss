@@ -1,7 +1,7 @@
 .navbar {
-  background: #f6f7f9;
+  background: #5b5c5f;
   color: rgb(16, 16, 16);
-  padding: 15px 50px;
+  padding: 1px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,12 +19,52 @@
     font-size: 18px;
     margin: 0 15px;
     text-decoration: none;
-    color: rgb(10, 9, 9);
+    color: rgb(253, 253, 253);
 }
 .navbar a:hover {
     color: #38bdf8;
 }
-.spline-viewer{
-    height: 500px;
-    width: 500px;
+// .spline-viewer{
+//     height: 500px;
+//     width: 500px;
+// }
+
+.home-container {
+  text-align: center;
+  padding: 50px;
+  color: white;
+}
+
+.description {
+  font-size: 18px;
+  margin: 20px 0;
+  color: white;
+}
+
+.cta-button {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 15px 30px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cta-button:hover {
+  background-color: #0056b3;
+}
+/* Fullscreen container */
+footer {
+  background: #5b5c5f;
+  color: rgb(16, 16, 16);
+  padding: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: n;
+  border-radius: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }

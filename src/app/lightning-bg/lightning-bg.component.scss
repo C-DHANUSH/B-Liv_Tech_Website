@@ -1,0 +1,12 @@
+.lightning-canvas {
+  position: fixed;    /* stay fixed on screen */
+  top: 0;
+  left: 0;
+  width: 100vw;       /* full width */
+  height: 100vh;      /* full height */
+  z-index: -1;        /* send behind all content */
+  background: #000;   /* black background */
+  display: block;     /* prevent extra space */
+}
+
+
