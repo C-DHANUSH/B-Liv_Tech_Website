@@ -64,6 +64,59 @@ body {
   color: #333333;
 }
 
+  .hero {
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-family: "Arial", sans-serif;
+    font-weight: 700;
+  }
+
+  .typing {
+    border-right: 4px solid #232222;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    font-size: 150px;
+    font-weight: bold;
+    margin: 8px 0;
+    animation: typing 1.5s steps(12, end) forwards,
+               blink 0.7s infinite;
+  }
+
+  /* Delay for each line */
+  .typing:nth-child(2) { animation-delay: 0s, 0s; }
+  .typing:nth-child(3) { animation-delay: 3s, 3s; }
+  .typing:nth-child(4) { animation-delay: 4s, 4s; }
+
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 12ch; } /* adjust width for longest word */
+  }
+
+  @keyframes blink {
+    50% { border-color: transparent; }
+  }
+
+  .btn {
+    margin-top: 30px;
+    padding: 12px 24px;
+    font-size: 18px;
+    background: #ffcc00;
+    color: #000;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+
+  .btn:hover {
+    background: #ffdb4d;
+  }
 /* Services Section */
 .services {
   padding: 60px 20px;
