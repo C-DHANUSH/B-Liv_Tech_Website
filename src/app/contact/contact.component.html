@@ -1,3 +1,39 @@
-<p>contact works!</p>
 
-<p>hello world</p>
+<div class="contact-bg">
+  <div class="contact-box">
+    <form>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="firstName">First Name *</label>
+          <input type="text" id="firstName" name="firstName" required />
+        </div>
+        <div class="form-group">
+          <label for="lastName">Last Name *</label>
+          <input type="text" id="lastName" name="lastName" required />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address *</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" />
+      </div>
+
+      <div class="form-group">
+        <label for="company">Company *</label>
+        <input type="text" id="company" name="company" required />
+      </div>
+
+      <div class="form-group">
+        <label for="message">How we can help you? *</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+      </div>
+
+      <button type="submit" class="btn-submit">Speak to an Expert</button>
+    </form>
+  </div>
+</div>
