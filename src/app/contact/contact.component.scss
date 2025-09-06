@@ -1,4 +1,3 @@
-
 .contact-bg {
   min-height: 100vh;
   display: flex;
@@ -7,6 +6,7 @@
   background: #f9f9f9;
   padding: 20px;
 }
+
 .contact-box {
   background: #fff;
   padding: 30px;
@@ -15,12 +15,14 @@
   width: 100%;
   max-width: 500px;
 }
+
 label {
   display: block;
   font-weight: 500;
   margin-bottom: 6px;
   color: #333;
 }
+
 input,
 textarea {
   width: 100%;
@@ -37,6 +39,7 @@ textarea:focus {
   outline: none;
   border-color: #1e90ff;
 }
+
 .form-row {
   display: flex;
   gap: 25px;
@@ -62,3 +65,11 @@ textarea:focus {
 .btn-submit:hover {
   background: #049a52;
 }
+
+.error {
+  color: red;
+  font-size: 13px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
