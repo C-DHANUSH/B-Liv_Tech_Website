@@ -21,7 +21,7 @@
   display: flex;
   align-items: center;
   font-weight: bold;
-  color: #06c167;
+  color: skyblue;
   margin-bottom: 10px;
   font-size: 18px;
 }
@@ -97,7 +97,7 @@ textarea:focus {
 
 /* Submit button */
 .btn-submit {
-  background: #06c167;
+  background: rgb(95, 197, 238);
   color: white;
   font-weight: bold;
   font-size: 16px;
@@ -110,7 +110,7 @@ textarea:focus {
 }
 
 .btn-submit:hover {
-  background: #049a52;
+  background:skyblue;
 }
 
 /* Error styling */
@@ -136,6 +136,58 @@ textarea:focus {
   .left img {
     height: auto;
   }
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  color: #1a1a1a;
+  padding: 18px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.navbar h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  font-style: bold;
+  letter-spacing: 1px;
+  color: #00aaff;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #0f0f0f;
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-left: 25px;
+  transition: all 0.3s ease;
+}
+.navbar a:hover {
+  color: #00aaff;
+  font-weight: 600;
+}
+.navbar nav button {
+  margin-right: 70px;
+  margin-left: 25px;
+  text-decoration: none;
+  color: #333333;
+  font-weight: 500;
+  font-size: 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.navbar nav button:hover {
+  background: #00aaff;
+  font-style: bold;
+  color: #ffffff;
 }
 
 
