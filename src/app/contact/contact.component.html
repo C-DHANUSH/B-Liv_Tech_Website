@@ -1,4 +1,22 @@
-<div class="contact-bg">
+
+<div class="contact-page">
+
+  <div class="left">
+    <div class="kicker">
+      <span class="icon">✎</span>
+      <span>Let's talk</span>
+    </div>
+
+    <h1>Talk to our experts</h1>
+    <p>
+      Understand, guide, implement. That's what our IT experts do best,
+      and they're standing by to create your tailor-made solution!
+    </p>
+
+    <img src="assets/meeting.jpg" alt="Experts" />
+  </div>
+
+  
   <div class="contact-box">
     <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
       <div class="form-row">
@@ -14,7 +32,7 @@
             #firstName="ngModel"
           />
           <div *ngIf="firstName.invalid && firstName.touched" class="error">
-            <div *ngIf="firstName.errors?.['required']">First name is required.</div>
+            <div *ngIf="firstName.errors?.['required']">Please fill out this field.</div>
             <div *ngIf="firstName.errors?.['pattern']">Only letters allowed.</div>
           </div>
         </div>
@@ -31,7 +49,7 @@
             #lastName="ngModel"
           />
           <div *ngIf="lastName.invalid && lastName.touched" class="error">
-            <div *ngIf="lastName.errors?.['required']">Last name is required.</div>
+            <div *ngIf="lastName.errors?.['required']">Please fill out this field.</div>
             <div *ngIf="lastName.errors?.['pattern']">Only letters allowed.</div>
           </div>
         </div>
@@ -45,60 +63,54 @@
           name="email"
           [(ngModel)]="formData.email"
           required
-          pattern="^[a-zA-Z0-9._%+-]+@gmail\.com$"
+          pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
           #email="ngModel"
         />
         <div *ngIf="email.invalid && email.touched" class="error">
-          <div *ngIf="email.errors?.['required']">Email is required.</div>
+          <div *ngIf="email.errors?.['required']">Please fill out this field.</div>
           <div *ngIf="email.errors?.['pattern']">
-            Must be a valid Gmail address (e.g. user@gmail.com).
+            Must be a valid email address (e.g. user@gmail.com, user@university.edu).
           </div>
         </div>
       </div>
 
       <div class="form-group">
-        <label for="phone">Phone Number</label>
+        <label for="phone">Phone Number *</label>
         <input
           type="tel"
           id="phone"
           name="phone"
           [(ngModel)]="formData.phone"
+          required
           pattern="^[0-9]*$"
           #phone="ngModel"
         />
         <div *ngIf="phone.invalid && phone.touched" class="error">
-          Phone number must contain digits only.
+          <div *ngIf="phone.errors?.['required']">Please fill out this field.</div>
+          <div *ngIf="phone.errors?.['pattern']">Phone number must contain digits only.</div>
         </div>
       </div>
 
       <div class="form-group">
-        <label for="company">Company *</label>
+        <label for="company">Company</label>
         <input
           type="text"
           id="company"
           name="company"
           [(ngModel)]="formData.company"
-          required
           #company="ngModel"
         />
-        <div *ngIf="company.invalid && company.touched" class="error">
-          Company is required.
-        </div>
       </div>
 
       <div class="form-group">
-        <label for="message">How we can help you? *</label>
+        <label for="message">How we can help you?</label>
         <textarea
           id="message"
           name="message"
           rows="4"
           [(ngModel)]="formData.message"
-          required
           #message="ngModel"
         ></textarea>
-        <div *ngIf="message.invalid && message.touched" class="error">
-          Message is required.
-        </div>
       </div>
 
       <button

@@ -1,12 +1,56 @@
-.contact-bg {
-  min-height: 100vh;
+/* Wrapper for the whole contact section */
+.contact-page {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 40px;
   background: #f9f9f9;
+}
+
+/* Left content section */
+.left {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
   padding: 20px;
 }
 
+.left .kicker {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  color: #06c167;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.left .kicker .icon {
+  margin-right: 8px;
+  font-size: 20px;
+}
+
+.left h1 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.left p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.left img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Right contact form section */
 .contact-box {
   background: #fff;
   padding: 30px;
@@ -16,6 +60,7 @@
   max-width: 500px;
 }
 
+/* Labels and inputs */
 label {
   display: block;
   font-weight: 500;
@@ -40,6 +85,7 @@ textarea:focus {
   border-color: #1e90ff;
 }
 
+/* First/Last name side-by-side */
 .form-row {
   display: flex;
   gap: 25px;
@@ -49,6 +95,7 @@ textarea:focus {
   flex: 1;
 }
 
+/* Submit button */
 .btn-submit {
   background: #06c167;
   color: white;
@@ -66,10 +113,30 @@ textarea:focus {
   background: #049a52;
 }
 
+/* Error styling */
 .error {
   color: red;
   font-size: 13px;
   margin-top: -10px;
   margin-bottom: 10px;
 }
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .contact-page {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left,
+  .contact-box {
+    max-width: 100%;
+  }
+
+  .left img {
+    height: auto;
+  }
+}
+
+
 
