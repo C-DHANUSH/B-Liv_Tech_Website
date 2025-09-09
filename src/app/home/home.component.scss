@@ -85,7 +85,7 @@ body {
 /* Hero Section */
 .hero {
   text-align: center;
-  padding: 50px 20px 50px;
+  padding: 150px 20px 150px;
   background: linear-gradient(to right, #ffffff, #e6f7ff);
   animation: fadeIn 1.2s ease-in-out;
 }
@@ -96,7 +96,7 @@ body {
   white-space: nowrap;
   overflow: hidden;
   width: 0;
-  font-size: 50px;
+  font-size: 90px;
   font-weight: 800;
   margin: 12px 0;
   color: #1a1a1a;
@@ -235,27 +235,156 @@ body {
   margin-bottom: 12px;
 }
 
-/* About Section */
+/* About Section - Gradient Highlight */
 .about {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 80px 20px;
+  background: linear-gradient(135deg, #f0faff, #ffffff);
+  border-radius: 20px;
+  max-width: 1000px;
+  margin: 80px auto;
+  padding: 60px 30px;
   text-align: center;
-  animation: fadeIn 1.5s ease-in-out;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  animation: fadeInUp 1.5s ease-in-out;
 }
 
 .about h3 {
-  font-size: 2rem;
-  color: #1a1a1a;
-  margin-bottom: 20px;
+  font-size: 2.2rem;
   font-weight: 700;
+  color: #00aaff;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.about h3::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #00aaff;
+  margin: 12px auto 0;
+  border-radius: 3px;
 }
 
 .about p {
-  font-size: 1.05rem;
-  color: #555555;
-  line-height: 1.8;
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: #333;
+  animation: fadeIn 2s ease-in-out;
 }
+
+/* Our Process - Timeline / Mind Map Style */
+.our-process {
+  padding: 80px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.our-process h3 {
+  font-size: 2.2rem;
+  color: #1a1a1a;
+  margin-bottom: 50px;
+  font-weight: 700;
+  position: relative;
+}
+
+.our-process h3::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #00aaff;
+  margin: 12px auto 0;
+  border-radius: 3px;
+}
+
+/* Vertical timeline layout */
+.process-map {
+  position: relative;
+  margin: 0 auto;
+  padding-left: 40px;
+  max-width: 700px;
+  border-left: 3px solid #00aaff;
+}
+
+.process-step {
+  position: relative;
+  margin-bottom: 40px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  animation: fadeInUp 1.5s ease-in-out;
+  transition: transform 0.3s ease;
+}
+
+.process-step:hover {
+  transform: translateX(10px) scale(1.02);
+}
+
+.process-step::before {
+  content: "";
+  position: absolute;
+  left: -52px;
+  top: 25px;
+  width: 20px;
+  height: 20px;
+  background: #00aaff;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  box-shadow: 0 0 0 4px rgba(0,170,255,0.2);
+  animation: pulse 2s infinite;
+}
+
+.process-step h4 {
+  font-size: 1.4rem;
+  color: #00aaff;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.process-step p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.7;
+}
+
+/* Our Story - Elegant Style */
+.our-story {
+  background: linear-gradient(120deg, #e6f7ff, #ffffff);
+  border-radius: 20px;
+  max-width: 1000px;
+  margin: 80px auto;
+  padding: 60px 30px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  animation: fadeIn 1.8s ease-in-out;
+}
+
+.our-story h3 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #00aaff;
+  margin-bottom: 20px;
+}
+
+.our-story h3::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #00aaff;
+  margin: 12px auto 0;
+  border-radius: 3px;
+}
+
+.story-text p {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.9;
+  margin-top: 15px;
+  animation: fadeInUp 2s ease-in-out;
+}
+
 
 /* Footer */
 .footer {
