@@ -1,31 +1,19 @@
 
-<header class="navbar">
-  <h1>B-Liv Tech</h1>
-  <nav>
-    <a href="/about">About</a>
-    <a href="#">Products</a>
-    <a href="#">Services</a>
-    <a href="/contact"><button class="active">Contact Us</button></a>
-    
-  </nav>
-</header>
-
-
-<section class="contact-section">
+<div class="contact-wrap">
   <div class="overlay"></div>
 
   <div class="container">
-    <h1 class="title">Contact Us</h1>
+    <h2 class="title">Contact Us</h2>
     <p class="subtitle">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
     </p>
 
-    <div class="content">
-      <!-- LEFT: contact details -->
-      <div class="left">
+    <div class="cols">
+      <!-- Left column: contact info -->
+      <div class="left-col">
         <div class="contact-item">
           <div class="icon">📍</div>
-          <div class="info">
+          <div class="text">
             <h4>Address</h4>
             <p>4671 Sugar Camp Road,<br/>Owatonna, Minnesota, 55060</p>
           </div>
@@ -33,7 +21,7 @@
 
         <div class="contact-item">
           <div class="icon">📞</div>
-          <div class="info">
+          <div class="text">
             <h4>Phone</h4>
             <p>507-475-6094</p>
           </div>
@@ -41,71 +29,70 @@
 
         <div class="contact-item">
           <div class="icon">✉️</div>
-          <div class="info">
+          <div class="text">
             <h4>Email</h4>
-            <p>contact@example.com</p>
+            <p>example@company.com</p>
           </div>
         </div>
       </div>
 
-      <!-- RIGHT: form card -->
-      <div class="right">
-        <div class="card">
-          <h2 class="card-title">Send Message</h2>
+      <!-- Right column: form -->
+      <div class="right-col">
+        <div class="form-card">
+          <h3>Send Message</h3>
 
           <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
-            <div class="form-group">
+            <!-- We align label + input using a left-aligned column -->
+            <div class="form-row">
               <label for="fullName">Full Name</label>
               <input
                 id="fullName"
                 name="fullName"
                 type="text"
                 required
-                minlength="2"
                 [(ngModel)]="model.fullName"
                 #fullName="ngModel"
-              />
-              <div class="err" *ngIf="fullName.invalid && fullName.touched">
-                Please fill out this field.
-              </div>
+                >
+              <div class="error" *ngIf="fullName.invalid && fullName.touched">Name is required.</div>
             </div>
 
-            <div class="form-group">
+            <div class="form-row">
               <label for="email">Email</label>
               <input
                 id="email"
                 name="email"
                 type="email"
                 required
+                email
                 [(ngModel)]="model.email"
                 #email="ngModel"
-              />
-              <div class="err" *ngIf="email.invalid && email.touched">
-                Valid email required.
+                >
+              <div class="error" *ngIf="email.invalid && email.touched">
+                Enter a valid email.
               </div>
             </div>
 
-            <div class="form-group">
+            <div class="form-row">
               <label for="message">Type your Message...</label>
               <textarea
                 id="message"
                 name="message"
-                rows="4"
+                rows="5"
                 required
                 [(ngModel)]="model.message"
                 #message="ngModel"
-              ></textarea>
-              <div class="err" *ngIf="message.invalid && message.touched">
-                Please fill out this field.
-              </div>
+               ></textarea>
+              <div class="error" *ngIf="message.invalid && message.touched">Message required.</div>
             </div>
 
-            <button class="btn-send" type="submit">Send</button>
+            <div class="form-actions">
+              <button type="submit" [disabled]="contactForm.invalid">Send</button>
+            </div>
           </form>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </div> 
+  </div> 
+</div> 
 
 

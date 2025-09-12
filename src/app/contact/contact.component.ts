@@ -6,8 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
+     
 
-   model = {
+    model = {
     fullName: '',
     email: '',
     message: ''
@@ -15,15 +16,14 @@ export class ContactComponent implements OnInit {
 
   onSubmit(form: any) {
     if (form.valid) {
-      console.log('Submitted model:', this.model);
-      // add your submission logic here (HTTP, service, etc.)
-      alert('Message sent — check console (demo)');
+      // handle submission (API call etc.)
+      console.log('Form submitted', this.model);
+      alert('Message sent (demo). Check console for payload.');
       form.resetForm();
     } else {
       alert('Please fill required fields correctly.');
     }
   }
- 
   
   constructor() { }
 
