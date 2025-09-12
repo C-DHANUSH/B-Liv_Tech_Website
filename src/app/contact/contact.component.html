@@ -10,127 +10,102 @@
   </nav>
 </header>
 
-<div class="contact-page">
 
-  <div class="left">
-    <div class="kicker">
-      <span class="icon">✎</span>
-      <span>Let's talk</span>
-    </div>
+<section class="contact-section">
+  <div class="overlay"></div>
 
-    <h1>Talk to our experts</h1>
-    <p>
-      Understand, guide, implement. That's what our IT experts do best,
-      and they're standing by to create your tailor-made solution!
+  <div class="container">
+    <h1 class="title">Contact Us</h1>
+    <p class="subtitle">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
     </p>
 
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJx-nrcfxYvKBCDwSgrlmaJEHC1LrjLlA3Mg&s" alt="Experts" />
+    <div class="content">
+      <!-- LEFT: contact details -->
+      <div class="left">
+        <div class="contact-item">
+          <div class="icon">📍</div>
+          <div class="info">
+            <h4>Address</h4>
+            <p>4671 Sugar Camp Road,<br/>Owatonna, Minnesota, 55060</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="icon">📞</div>
+          <div class="info">
+            <h4>Phone</h4>
+            <p>507-475-6094</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="icon">✉️</div>
+          <div class="info">
+            <h4>Email</h4>
+            <p>contact@example.com</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: form card -->
+      <div class="right">
+        <div class="card">
+          <h2 class="card-title">Send Message</h2>
+
+          <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+            <div class="form-group">
+              <label for="fullName">Full Name</label>
+              <input
+                id="fullName"
+                name="fullName"
+                type="text"
+                required
+                minlength="2"
+                [(ngModel)]="model.fullName"
+                #fullName="ngModel"
+              />
+              <div class="err" *ngIf="fullName.invalid && fullName.touched">
+                Please fill out this field.
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                required
+                [(ngModel)]="model.email"
+                #email="ngModel"
+              />
+              <div class="err" *ngIf="email.invalid && email.touched">
+                Valid email required.
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Type your Message...</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                required
+                [(ngModel)]="model.message"
+                #message="ngModel"
+              ></textarea>
+              <div class="err" *ngIf="message.invalid && message.touched">
+                Please fill out this field.
+              </div>
+            </div>
+
+            <button class="btn-send" type="submit">Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
   </div>
+</section>
 
-  
-  <div class="contact-box">
-    <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
-      <div class="form-row">
-        <div class="form-group">
-          <label for="firstName">First Name *</label>
-          <input
-            type="text"
-            id="firstName"
-            name="firstName"
-            [(ngModel)]="formData.firstName"
-            required
-            pattern="^[A-Za-z]+$"
-            #firstName="ngModel"
-          />
-          <div *ngIf="firstName.invalid && firstName.touched" class="error">
-            <div *ngIf="firstName.errors?.['required']">Please fill out this field.</div>
-            <div *ngIf="firstName.errors?.['pattern']">Only letters allowed.</div>
-          </div>
-        </div>
 
-        <div class="form-group">
-          <label for="lastName">Last Name *</label>
-          <input
-            type="text"
-            id="lastName"
-            name="lastName"
-            [(ngModel)]="formData.lastName"
-            required
-            pattern="^[A-Za-z]+$"
-            #lastName="ngModel"
-          />
-          <div *ngIf="lastName.invalid && lastName.touched" class="error">
-            <div *ngIf="lastName.errors?.['required']">Please fill out this field.</div>
-            <div *ngIf="lastName.errors?.['pattern']">Only letters allowed.</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label for="email">Email Address *</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          [(ngModel)]="formData.email"
-          required
-          pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
-          #email="ngModel"
-        />
-        <div *ngIf="email.invalid && email.touched" class="error">
-          <div *ngIf="email.errors?.['required']">Please fill out this field.</div>
-          <div *ngIf="email.errors?.['pattern']">
-            Must be a valid email address.
-          </div>
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label for="phone">Phone Number *</label>
-        <input
-          type="tel"
-          id="phone"
-          name="phone"
-          [(ngModel)]="formData.phone"
-          required
-          pattern="^[0-9]*$"
-          #phone="ngModel"
-        />
-        <div *ngIf="phone.invalid && phone.touched" class="error">
-          <div *ngIf="phone.errors?.['required']">Please fill out this field.</div>
-          <div *ngIf="phone.errors?.['pattern']">Phone number must contain digits only.</div>
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label for="company">Company</label>
-        <input
-          type="text"
-          id="company"
-          name="company"
-          [(ngModel)]="formData.company"
-          #company="ngModel"
-        />
-      </div>
-
-      <div class="form-group">
-        <label for="message">How we can help you?</label>
-        <textarea
-          id="message"
-          name="message"
-          rows="4"
-          [(ngModel)]="formData.message"
-          #message="ngModel"
-        ></textarea>
-      </div>
-
-      <button
-        type="submit"
-        class="btn-submit"
-        [disabled]="contactForm.invalid"
-      >
-        Speak to an Expert
-      </button>
-    </form>
-  </div>
-</div>

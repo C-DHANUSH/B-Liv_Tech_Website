@@ -7,23 +7,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
-  
- 
-    formData = {
-    firstName: '',
-    lastName: '',
+   model = {
+    fullName: '',
     email: '',
-    phone: '',
-    company: '',
     message: ''
   };
 
-  onSubmit(form: any): void {
+  onSubmit(form: any) {
     if (form.valid) {
-      console.log('Form Submitted:', this.formData);
+      console.log('Submitted model:', this.model);
+      // add your submission logic here (HTTP, service, etc.)
+      alert('Message sent — check console (demo)');
       form.resetForm();
+    } else {
+      alert('Please fill required fields correctly.');
     }
   }
+ 
+  
   constructor() { }
 
   ngOnInit(): void {
