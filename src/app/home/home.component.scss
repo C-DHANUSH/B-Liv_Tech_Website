@@ -206,9 +206,10 @@ body {
 /* Hero Section */
 .hero {
   text-align: center;
-  padding: 150px 20px 150px;
-  background: linear-gradient(to right, #ffffff, #e6f7ff);
+  padding: 100px 20px 100px;
+  background: linear-gradient(to right, #52a2c0, #e6f7ff);
   animation: fadeIn 1.2s ease-in-out;
+  border-radius: 5px solid transparent;
 }
 
 .typing {
@@ -217,8 +218,8 @@ body {
   white-space: nowrap;
   overflow: hidden;
   width: 0;
-  font-size: 90px;
-  font-weight: 800;
+  font-size: 60px;
+  font-weight: 100%;
   margin: 12px 0;
   color: #1a1a1a;
   animation: typing 1.5s steps(12, end) forwards,
@@ -231,7 +232,7 @@ body {
 
 @keyframes typing {
   from { width: 0; }
-  to { width: 8ch; }
+  to { width: 10ch; }
 }
 @keyframes blink {
   50% { border-color: transparent; }
