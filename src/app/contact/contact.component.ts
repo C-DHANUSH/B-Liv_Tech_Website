@@ -11,7 +11,8 @@ export class ContactComponent implements OnInit {
     model = {
     fullName: '',
     email: '',
-    message: ''
+    message: '',
+    phone:''
   };
 
   onSubmit(form: any) {
