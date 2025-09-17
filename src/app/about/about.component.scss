@@ -178,7 +178,7 @@ body {
       animation: fadeInUp 2s ease;
     }
     .vision h2 {
-      color: #004e92;
+      color: #00aaff;
       margin-bottom: 15px;
     }
     .vision p {
@@ -237,7 +237,7 @@ body {
 
     .section-title {
       font-size: 32px;
-      color: #004080;
+      color: #00aaff;
       font-weight: bold;
       margin-bottom: 50px;
     }
@@ -248,12 +248,77 @@ body {
       gap: 40px;
       flex-wrap: wrap;
     }
-    .service-headings {
-      display: flex;
-      justify-content: center;
-      gap: 200px;
-      margin-bottom: 20px;
-    }
+   .ser-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30%;
+  gap: 180px;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #222;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.typing {
+  display: inline-block;
+  border-right: 3px solid #007BFF;
+  animation: blink 0.7s infinite;
+  white-space: nowrap;
+  overflow: hidden;
+  vertical-align: bottom;
+  padding-right: 4px;
+}
+
+@keyframes blink {
+  0% { border-color: transparent; }
+  50% { border-color: #007BFF; }
+  100% { border-color: transparent; }
+}
+
+
+   
+
+h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #222;
+  white-space: nowrap; 
+}
+
+.typing {
+  display: inline-block;
+  border-right: 3px solid #007BFF;
+  padding-right: 4px;
+  animation: blink 0.7s infinite;
+  min-width: 12ch;
+  overflow: hidden;
+  vertical-align: bottom;
+}
+
+@keyframes blink {
+  0% { border-color: transparent; }
+  50% { border-color: #007BFF; }
+  100% { border-color: transparent; }
+}
+
+h3 {
+  font-size: 1.3rem;
+  margin: 0;
+  transition: all 0.5s ease-in-out;
+  color: gray;
+}
+
+.active {
+  color: #00aaff;      
+  transform: scale(1.2);
+  font-weight: bold;
+}
+
 
     .service-card {
       position: relative;
@@ -278,7 +343,6 @@ body {
       display: block;
     }
 
-    /* Overlay that slides up */
     .overlay {
       position: absolute;
       bottom: -100%;
@@ -495,13 +559,13 @@ body {
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(11,14,42,0.8); /* dark overlay */
+  background: rgba(11,14,42,0.8); 
   z-index: 0;
 }
 
 .industries-section * {
   position: relative;
-  z-index: 1; /* keeps text above overlay */
+  z-index: 1;
 }
 
 
