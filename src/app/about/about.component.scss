@@ -105,7 +105,7 @@ body {
     //   margin: 0;
     // }
     .hero-back {
-      background: url('/assets/b-liv.jpg') no-repeat center center/cover;
+      background: url('/assets/it image.jpg') no-repeat center center/cover;
       padding: 40px 0 0 0;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 
@@ -127,11 +127,13 @@ body {
     header h1 {
       font-size: 3rem;
       animation: slideDown 1.5s ease;
+      color: black;
     }
     header p {
       font-size: 1.2rem;
       margin-top: 15px;
       animation: fadeInUp 2s ease;
+      color: black;
     }
     header button {
       margin-top: 20px;
