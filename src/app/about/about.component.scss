@@ -248,6 +248,12 @@ body {
       gap: 40px;
       flex-wrap: wrap;
     }
+    .service-headings {
+      display: flex;
+      justify-content: center;
+      gap: 200px;
+      margin-bottom: 20px;
+    }
 
     .service-card {
       position: relative;
