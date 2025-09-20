@@ -100,10 +100,22 @@ body {
   50% { transform: scale(1.08); box-shadow: 0 0 20px rgba(0,170,255,0.6); }
   100% { transform: scale(1); box-shadow: 0 0 0 rgba(0,170,255,0.5); }
 }
-
-    // h1, h2, h3 {
-    //   margin: 0;
-    // }
+    .navbar nav button {
+      background: #00aaff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.3s, transform 0.3s;
+    }
+    .navbar nav button:hover {
+      background: #007bbf;
+      transform: scale(1.05);
+      animation: pulse 1.5s infinite;
+    }
+    
     .hero-back {
       background: url('/assets/it image.jpg') no-repeat center center/cover;
       padding: 40px 0 0 0;
@@ -114,7 +126,7 @@ body {
     }
     section {
       padding: 60px 20px;
-      text-align: center;
+      // text-align: center;
     }
     header {
       // background: linear-gradient(135deg, #0eb3e6, #004e92);
@@ -151,18 +163,36 @@ body {
       color: white;
       transform: scale(1.1);
     }
-    .story {
-      background: #f7fafb;
-      color: rgb(4, 4, 4);
-      padding: 50px 20px;
-      border-radius: 15px;
-      margin: 40px auto;
-      max-width: 900px;
+.intro1 {
+  display: flex;
+  margin-top: 50px;
+  justify-content: flex-start; 
+  align-items: flex-start;     
+  width: 100%;
+  // padding-left: 0;
+  background-image: url('/assets/it image.jpg');
+}
+
+.intro1 > div {
+  text-align: left;            
+}
+
+.story {
+  background: #f7fafb;
+  color: rgb(4, 4, 4);
+  padding: 50px 20px;
+   margin-left: 0;
+  margin-left: 50px;
+  margin-top: 50px;
+   margin-bottom: 50px;
+  border-radius: 15px;
+      max-width: 500px;
       animation: zoomIn 1.5s ease;
       text-align: left;
       line-height: 1.6;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       animation: fadeIn 2s ease;
+      
     }
     .story h2 {
       color: #00aaff;
@@ -172,9 +202,15 @@ body {
       line-height: 1.7;
     }
     .vision {
-      max-width: 1000px;
-      margin: auto;
+      max-width: 500px;
+      background: #f7fafb;
+      color: rgb(4, 4, 4);
+       margin-left: 0;
+       margin-left: 50px;
+       margin-top: 50px;
+        margin-bottom: 50px;
       animation: fadeInUp 2s ease;
+      border-radius: 15px;
     }
     .vision h2 {
       color: #00aaff;
@@ -626,6 +662,3 @@ h3 {
       font-size: 14px;
       color: #555;
     }
-
-
-
