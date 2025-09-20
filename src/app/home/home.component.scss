@@ -653,16 +653,95 @@ body {
   animation: fadeIn 2s ease-in-out;
 }
 
-
-/* Footer */
 .footer {
-  background: #1a1a1a;
-  color: #dddddd;
-  text-align: center;
-  padding: 35px 0;
-  font-size: 0.95rem;
-  animation: fadeInUp 1.5s ease-in-out;
+  background: #111827;
+  color: #fff;
+  padding: 40px 20px;
+  position: relative;
 }
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-about {
+  flex: 1;
+  min-width: 250px;
+  margin-bottom: 20px;
+}
+
+.footer-links {
+  flex: 1;
+  min-width: 150px;
+  margin-bottom: 20px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin: 8px 0;
+}
+
+.footer-links ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+  color: #00aaff;
+}
+
+.social-icons {
+  flex: 1;
+  text-align: right;
+  min-width: 200px;
+}
+
+.social-icons a {
+  color: #fff;
+  margin: 0 8px;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #00aaff;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  border-top: 1px solid #333;
+  padding-top: 10px;
+}
+
+.scroll-top {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  background: #00aaff;
+  color: #fff;
+  padding: 10px 12px;
+  border-radius: 50%;
+  font-size: 18px;
+  text-align: center;
+  transition: background 0.3s ease;
+}
+
+.scroll-top:hover {
+  background: #0088cc;
+}
+
+
 
 /* Animations */
 @keyframes fadeIn {
