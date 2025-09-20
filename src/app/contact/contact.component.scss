@@ -1,4 +1,5 @@
 
+
 :host { display: block; }
 
 /* Layout & background */
@@ -140,20 +141,21 @@ textarea{
   outline: none;
   transition: border-color .18s;
   background: transparent;
+  font-family: 'Poppins', sans-serif;
 }
 input:focus,
 textarea:focus{
   border-bottom-color: #1aa6b7;
+  
 }
 
 /* Button */
 .btn-send{
-  // margin-top: 6px;
+  
   background: hsl(183, 82%, 45%);
   color: #fff;
   border: none;
-  // padding: 12px 20px ;
-  // font-weight: 600;
+  
   cursor: pointer;
   border-radius: 6px;
   box-shadow: 0 6px 12px rgba(20,199,208,0.18);
@@ -165,13 +167,17 @@ textarea:focus{
 }
 .btn-send:active{ transform: translateY(1px); }
 
-/* Error text */
-.err{
+
+
+.err {
   color: #c53939;
   font-size: 12px;
   margin-top: 6px;
+  text-align: left;
 }
-
+.email {
+  padding-right: 0;
+}
 /* Responsive */
 @media (max-width: 980px) {
   .content{ flex-direction: column-reverse; align-items: center; }
@@ -180,5 +186,4 @@ textarea:focus{
   .info p{ text-align:center; }
   .right{ width: 100%; max-width: 520px; }
 }
-
 
