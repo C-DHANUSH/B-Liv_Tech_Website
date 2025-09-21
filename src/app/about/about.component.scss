@@ -166,10 +166,11 @@ body {
 .intro1 {
   display: flex;
   margin-top: 50px;
+  margin-bottom: 50px;
   justify-content: flex-start; 
   align-items: flex-start;     
   width: 100%;
-  // padding-left: 0;
+  border-radius: 5px;
   background-image: url('/assets/it image.jpg');
 }
 
@@ -186,7 +187,7 @@ body {
   margin-top: 50px;
    margin-bottom: 50px;
   border-radius: 15px;
-      max-width: 500px;
+      max-width: 700px;
       animation: zoomIn 1.5s ease;
       text-align: left;
       line-height: 1.6;
@@ -197,12 +198,14 @@ body {
     .story h2 {
       color: #00aaff;
       margin-bottom: 20px;
+      font-size: 2rem;
     }
     .story p {
       line-height: 1.7;
+      font-size: 1.1rem;
     }
     .vision {
-      max-width: 500px;
+      max-width: 700px;
       background: #f7fafb;
       color: rgb(4, 4, 4);
        margin-left: 0;
@@ -215,55 +218,12 @@ body {
     .vision h2 {
       color: #00aaff;
       margin-bottom: 15px;
+      font-size: 2rem;
     }
     .vision p {
       font-size: 1.1rem;
       line-height: 1.8;
     }
-    // .services {
-    //   background: #f7faff;
-    //   animation: fadeIn 2s ease;
-    //   align-items: center;
-    // }
-    // .services h2 {
-    //   color: #004e92;
-    //   margin-bottom: 40px;
-    // }
-    // .service-grid {
-    //   display: grid;
-    //   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    //   gap: 30px;
-    //   max-width: 900px;
-    //   margin: auto;
-    //   animation: fadeInUp 2s ease;
-    //   align-items: center;
-    //   align-items: center;
-    // }
-
-    // .service-card {
-    //   // background: white;
-    //   padding: 30px 20px;
-    //   border-radius: 15px;
-    //   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    //   transition: transform 0.3s ease, box-shadow 0.3s ease;
-    //   animation: zoomIn 1.5s ease;
-    // }
-    // .service-card:hover {
-    //   transform: translateY(-10px);
-    //   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-    // }
-    // .service-card img {
-    //   width: 60px;
-    //   margin-bottom: 15px;
-    // }
-    // .service-card h3 {
-    //   color: #000428;
-    //   margin-bottom: 10px;
-    // }
-    // .service-card p {
-    //   font-size: 1rem;
-    //   line-height: 1.6;
-    // }
 
     .services-section {
       text-align: center;
@@ -564,21 +524,6 @@ h3 {
         margin-left: 10px;
       }
     }
-
-//  .industries-section {
-//       text-align: center;
-//       padding: 60px 20px;
-//       // background-color: black;
-//       background-image: url('/assets/inde.jpg');
-//     }
-// .industries-section {
-//   text-align: center;
-//   padding: 60px 20px;
-//   background: url('https://t4.ftcdn.net/jpg/04/78/95/73/360_F_478957385_zCuEGTXNJKPygVCxmxkY01oV7JFVUFDv.jpg') no-repeat center center;
-//   background-size: cover;   /* ensures the image covers the section */
-//   color: white;
-//   position: relative;
-// }
 
 
 .industries-section {
