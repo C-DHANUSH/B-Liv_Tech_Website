@@ -343,7 +343,7 @@ body {
 
 /* Services Section */
 .services {
-  padding: 80px 20px;
+  padding: 50px 20px;
   text-align: center;
   background: #ffffff;
   animation: fadeInUp 1.5s ease-in-out;
@@ -352,7 +352,7 @@ body {
 .services .section-title {
   font-size: 2rem;
   color: #1a1a1a;
-  margin-bottom: 50px;
+  margin-bottom: 90px;
   font-weight: 700;
   position: relative;
 }
@@ -370,13 +370,13 @@ body {
 .services-container {
   display: flex;
   justify-content: center;
-  gap: 40px;
+  gap: 50px;
   flex-wrap: wrap;
 }
 
-.card {
+.cards {
   display: flex;
-  gap: 30px;
+  gap: 80px;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -384,8 +384,8 @@ body {
 /* Flip Cards */
 .flip-card {
   background: transparent;
-  width: 280px;
-  height: 360px;
+  width: 380px;
+  height: 400px;
   perspective: 1000px;
   animation: zoomIn 1.5s ease-in-out;
 }
@@ -423,7 +423,7 @@ body {
 }
 
 .flip-card-back {
-  background: #00aaff;
+  background: #00aaff33;
   color: #ffffff;
   transform: rotateY(180deg);
 }
@@ -781,10 +781,27 @@ body {
 
 
 .industries-section {
-      text-align: center;
-      padding: 60px 20px;
-      background-color: black;
-    }
+  position: relative;
+  text-align: center;
+  padding: 60px 20px;
+  background: url('/assets/inde.jpg') no-repeat center center;
+  background-size: cover;
+  color: white;
+}
+
+.industries-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(11,14,42,0.8); 
+  z-index: 0;
+}
+
+.industries-section * {
+  position: relative;
+  z-index: 1;
+}
+
 
     .tag {
       color: #00aaff;
