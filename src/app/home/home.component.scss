@@ -343,7 +343,7 @@ body {
 
 /* Services Section */
 .services {
-  padding: 80px 20px;
+  padding: 50px 20px;
   text-align: center;
   background: #ffffff;
   animation: fadeInUp 1.5s ease-in-out;
@@ -352,7 +352,7 @@ body {
 .services .section-title {
   font-size: 2rem;
   color: #1a1a1a;
-  margin-bottom: 50px;
+  margin-bottom: 90px;
   font-weight: 700;
   position: relative;
 }
@@ -370,13 +370,13 @@ body {
 .services-container {
   display: flex;
   justify-content: center;
-  gap: 40px;
+  gap: 50px;
   flex-wrap: wrap;
 }
 
-.card {
+.cards {
   display: flex;
-  gap: 30px;
+  gap: 80px;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -384,8 +384,8 @@ body {
 /* Flip Cards */
 .flip-card {
   background: transparent;
-  width: 280px;
-  height: 360px;
+  width: 380px;
+  height: 400px;
   perspective: 1000px;
   animation: zoomIn 1.5s ease-in-out;
 }
@@ -423,15 +423,17 @@ body {
 }
 
 .flip-card-back {
-  background: #00aaff;
-  color: #ffffff;
+  background: #62c3f433;
+  color: #060606;
   transform: rotateY(180deg);
+  font-size: 1rem;
 }
 
 .flip-card .title {
   font-size: 1.3rem;
   font-weight: 700;
   margin-bottom: 12px;
+  color: black;
 }
 
 /* About Section - Gradient Highlight */
@@ -583,17 +585,165 @@ body {
   margin-top: 15px;
   animation: fadeInUp 2s ease-in-out;
 }
-
-
-/* Footer */
-.footer {
-  background: #1a1a1a;
-  color: #dddddd;
+/* Questions Section */
+.questions {
+  background: linear-gradient(135deg, #f0faff, #ffffff);
+  padding: 80px 20px;
   text-align: center;
-  padding: 35px 0;
-  font-size: 0.95rem;
+  border-radius: 20px;
+  max-width: 1100px;
+  margin: 80px auto;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
   animation: fadeInUp 1.5s ease-in-out;
 }
+
+.questions h5 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #00aaff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.questions h3 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.questions h3::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #00aaff;
+  margin: 12px auto 0;
+  border-radius: 3px;
+}
+
+.questions .btn {
+  margin-top: 20px;
+  padding: 14px 32px;
+  font-size: 18px;
+  background: #00aaff;
+  color: #ffffff;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 18px rgba(0,170,255,0.3);
+}
+
+.questions .btn:hover {
+  background: #008ecc;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,170,255,0.4);
+}
+
+.questions-container {
+  margin-top: 30px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #444;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.footer {
+  background: #111827;
+  color: #fff;
+  padding: 40px 20px;
+  position: relative;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-about {
+  flex: 1;
+  min-width: 250px;
+  margin-bottom: 20px;
+}
+
+.footer-links {
+  flex: 1;
+  min-width: 150px;
+  margin-bottom: 20px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin: 8px 0;
+}
+
+.footer-links ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+  color: #00aaff;
+}
+
+.social-icons {
+  flex: 1;
+  text-align: right;
+  min-width: 200px;
+}
+
+.social-icons a {
+  color: #fff;
+  margin: 0 8px;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #00aaff;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  border-top: 1px solid #333;
+  padding-top: 10px;
+}
+
+.scroll-top {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  background: #00aaff;
+  color: #fff;
+  padding: 10px 12px;
+  border-radius: 50%;
+  font-size: 18px;
+  text-align: center;
+  transition: background 0.3s ease;
+}
+
+.scroll-top:hover {
+  background: #0088cc;
+}
+
+
 
 /* Animations */
 @keyframes fadeIn {
@@ -633,10 +783,27 @@ body {
 
 
 .industries-section {
-      text-align: center;
-      padding: 60px 20px;
-      background-color: black;
-    }
+  position: relative;
+  text-align: center;
+  padding: 60px 20px;
+  background: url('/assets/inde.jpg') no-repeat center center;
+  background-size: cover;
+  color: white;
+}
+
+.industries-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(11,14,42,0.8); 
+  z-index: 0;
+}
+
+.industries-section * {
+  position: relative;
+  z-index: 1;
+}
+
 
     .tag {
       color: #00aaff;
@@ -650,7 +817,7 @@ body {
       font-size: 28px;
       font-weight: bold;
       margin-bottom: 15px;
-      color: white;
+      color: rgb(12, 12, 12);
     }
 
     .subtitle {
