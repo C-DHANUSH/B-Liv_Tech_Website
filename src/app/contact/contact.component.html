@@ -43,39 +43,52 @@
 
           <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
             <div class="form-group">
-              <label for="fullName"></label>
-              <input
-                id="fullName"
-                name="fullName"
-                type="text"
-                required
-                minlength="2"
-                [(ngModel)]="model.fullName"
-                #fullName="ngModel"
-                placeholder="Full Name *"
-              />
-              <div class="err" *ngIf="fullName.invalid && fullName.touched">
-                Please fill out this field.
-              </div>
-            </div>
+  <label for="fullName"></label>
+  <input
+    id="fullName"
+    name="fullName"
+    type="text"
+    required
+    minlength="2"
+    pattern="^[A-Za-z\s]+$"
+    [(ngModel)]="model.fullName"
+    #fullName="ngModel"
+    placeholder="Full Name *"
+  />
+  <div class="err" *ngIf="fullName.invalid && fullName.touched">
+    <div *ngIf="fullName.errors?.['required']">
+      Please fill out this field.
+    </div>
+    
+    <div *ngIf="fullName.errors?.['pattern']">
+      Only letters are allowed.
+    </div>
+  </div>
+</div>
 
-            <div class="form-group">
-              <label for="email"></label>
-              <input
-                id="email"
-                name="email"
-                type="email"
-                required
-                [(ngModel)]="model.email"
-                #email="ngModel"
-                placeholder="Email *"
-              />
-              <div class="err" *ngIf="email.invalid && email.touched">
-                <div class="email">
-                Please enter an email address.
-                </div>
-              </div>
-            </div>
+
+           <div class="form-group">
+  <label for="email"></label>
+  <input
+    id="email"
+    name="email"
+    type="email"
+    required
+    pattern=".+@.+"
+    [(ngModel)]="model.email"
+    #email="ngModel"
+    placeholder="Email *"
+  />
+  <div class="err" *ngIf="email.invalid && email.touched">
+    <div *ngIf="email.errors?.['required']">
+      Please enter an email address.
+    </div>
+    <div *ngIf="email.errors?.['pattern'] || email.errors?.['email']">
+      Please enter a valid email address.
+    </div>
+  </div>
+</div>
+
 
           <div class="form-group">
     <label for="phone"></label>
