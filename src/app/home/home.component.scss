@@ -423,15 +423,17 @@ body {
 }
 
 .flip-card-back {
-  background: #00aaff33;
-  color: #ffffff;
+  background: #62c3f433;
+  color: #060606;
   transform: rotateY(180deg);
+  font-size: 1rem;
 }
 
 .flip-card .title {
   font-size: 1.3rem;
   font-weight: 700;
   margin-bottom: 12px;
+  color: black;
 }
 
 /* About Section - Gradient Highlight */
@@ -815,7 +817,7 @@ body {
       font-size: 28px;
       font-weight: bold;
       margin-bottom: 15px;
-      color: white;
+      color: rgb(12, 12, 12);
     }
 
     .subtitle {
