@@ -1,61 +1,67 @@
-  <div class="container">
-    <nav class="navbar">
-        <div class="logo">
-          <img src="logo.png" alt="B-Liv"> 
+<div class="container">
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="/assets/logo.png" alt="B-Liv Tech">
+    </div>
+    <ul> 
+      <li><a href="#home" class="active">Home</a></li>
+      <li>
+        <a href="#">Company</a>
+        <div class="dropdown">
+          <a href="#about">About Us</a>
+          <a href="#team">Team</a>
         </div>
-        <ul>
-          <li><a href="/home" >Home</a></li>
-          <li>
-            <a href="#" class="active">Company</a>
-            <div class="dropdown">
-              <a href="/about">About Us</a>
-              <a href="#">Team</a>
-            </div>
-          </li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Products</a></li>
-          <li><a href="#">Contact</a>
-          <div class="dropdown">
-              <a href="/contact">Contact Us</a>
-            </div></li>
-        </ul>
-      </nav>
-  </div>
-    <div class="hero-back">
-      <header>
-          <h1>B-liv Tech</h1>
-          <p>Your Trusted Partner in Web & App Development</p>
-          <button>Get Started</button>
-        </header>
-    </div> 
-  
+      </li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#products">Products</a></li>
+      <li>
+        <a href="#contact">Contact</a>
+        <div class="dropdown">
+          <a href="#contact">Contact Us</a>
+        </div>
+      </li>
+    </ul>
+    <button class="cta-btn">Get Started</button>
+  </nav>
+
+  <!-- Hero/Header Section with Image -->
+  <header class="hero-header">
+    <div class="overlay"></div>
+    <div class="header-content">
+      <h1>B-liv Tech</h1>
+      <p>Your Trusted Partner in Web & App Development</p>
+      <button>Get Started</button>
+    </div>
+  </header>
+
+  <!-- Intro Section -->
   <div class="intro1">
     <div>
-        <section class="story">
-          <h2>Our Story</h2>
-          <p>
-            B-liv Tech was founded with a mission to create impactful digital solutions. 
-            From startups to enterprises, we empower businesses with high-performing websites 
-            and mobile apps. With years of experience and a talented team, 
-            we’ve successfully delivered solutions to clients across industries.
-          </p>
-        </section>
-        <section class="vision">
-          <h2>Our Vision & Mission</h2>
-          <p>
-            Our vision is to be a global leader in web and app development.  
-            Our mission is to deliver innovative, scalable, and user-friendly technology 
-            solutions that help businesses grow and thrive in the digital world.
-          </p>
-        </section>
+      <section class="story">
+        <h2>Our Story</h2>
+        <p>
+          B-liv Tech was founded to create impactful digital solutions.
+          From startups to enterprises, we empower businesses with high-performing
+          websites and mobile apps.
+        </p>
+      </section>
+      <section class="vision">
+        <h2>Our Vision & Mission</h2>
+        <p>
+          Our vision is to be a global leader in web and app development.
+          Our mission is to deliver innovative, scalable, and user-friendly solutions.
+        </p>
+      </section>
     </div>
   </div>
+
+  <!-- Industries Section -->
   <section class="industries-section">
     <span class="tag">INDUSTRIES</span>
     <h2 class="title">Our IT services and consulting will<br>take your business to the next level</h2>
-    <p class="subtitle">
-      Provide IT services to hundreds of SME customers across a diverse range of sectors.
-    </p>
+    <p class="subtitle">Provide IT services to hundreds of SME customers across diverse sectors.</p>
     <div class="cards">
       <div class="card">
         <div class="icon">🩺</div>
@@ -75,18 +81,15 @@
       <div class="card">
         <div class="icon">👗</div>
         <h3>FASHION</h3>
-        <p>How we can help your fation brand stand out</p>
+        <p>Helping your fashion brand stand out</p>
       </div>
-    </div>
+    </div> 
   </section>
-  <section class="services-section">
+
+  <!-- Services Section -->
+  <section class="services-section" id="services">
     <h2 class="section-title">Our Services</h2>
-    <div class="ser-container">
-      <h3>Web Development</h3>
-      <h3>App Development</h3>
-    </div><br>
     <div class="services-container">
-      <!-- Web Development -->
       <div class="service-card">
         <img src="/assets/WEB1.jpg" alt="Web Development">
         <div class="overlay">
@@ -94,26 +97,30 @@
           <p>We build responsive, secure, and scalable websites using the latest technologies.</p>
         </div>
       </div>
-      <!-- App Development -->
       <div class="service-card">
         <img src="/assets/apps.gif" alt="App Development">
         <div class="overlay">
           <h3>App Development</h3>
-          <p>We create feature-rich mobile applications for Android and iOS with smooth user experience.</p>
+          <p>We create feature-rich mobile applications for Android and iOS with smooth UX.</p>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- CTA Section -->
   <section class="cta">
     <h2>Boost Your Business with B-liv Tech</h2>
     <p>Partner with us to create digital solutions that drive success.</p>
     <button>Contact Us</button>
   </section>
+
+  <!-- Footer -->
   <footer>
     <p>© 2025 B-liv Tech. All Rights Reserved.</p>
     <p>
-      <a href="/home">Home</a> | 
-      <a href="#">Services</a> | 
-      <a href="#">Contact</a>
+      <a href="#home">Home</a> | 
+      <a href="#services">Services</a> | 
+      <a href="#contact">Contact</a>
     </p>
   </footer>
+</div>
