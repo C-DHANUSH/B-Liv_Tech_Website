@@ -1,4 +1,4 @@
-
+<!-- 
 <section class="contact-section">
   <div class="overlay"></div>
 
@@ -15,15 +15,14 @@
           <div class="icon">📍</div>
           <div class="info">
             <h4>Address</h4>
-            <p>4671 Sugar Camp Road,<br/>Owatonna, Minnesota,<br> 55060</p>
-          </div>
+            <p>Kavindapadi,<br/>Erode - 638455<br>     </div>
         </div>
 
         <div class="contact-item">
           <div class="icon">📞</div>
           <div class="info">
             <h4>Phone</h4>
-            <p>507-475-6094</p>
+            <p>7373277998,<br>8508709483</p>
           </div>
         </div>
 
@@ -31,7 +30,153 @@
           <div class="icon">✉️</div>
           <div class="info">
             <h4>Email</h4>
-            <p>contact@example.com</p>
+            <p>blivtech.ss@gmail.com</p>
+          </div>
+        </div>
+      </div>
+
+  
+      <div class="right">
+        <div class="card">
+          <h2 class="card-title">Send Message</h2>
+
+          <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+            <div class="form-group">
+  <label for="fullName"></label>
+  <input
+    id="fullName"
+    name="fullName"
+    type="text"
+    required
+    minlength="2"
+    pattern="^[A-Za-z\s]+$"
+    [(ngModel)]="model.fullName"
+    #fullName="ngModel"
+    placeholder="Full Name *"
+  />
+  <div class="err" *ngIf="fullName.invalid && fullName.touched">
+    <div *ngIf="fullName.errors?.['required']">
+      Please fill out this field.
+    </div>
+    
+    <div *ngIf="fullName.errors?.['pattern']">
+      Only letters are allowed.
+    </div>
+  </div>
+</div>
+
+
+           <div class="form-group">
+  <label for="email"></label>
+  <input
+    id="email"
+    name="email"
+    type="email"
+    required
+    pattern=".+@.+"
+    [(ngModel)]="model.email"
+    #email="ngModel"
+    placeholder="Email *"
+  />
+  <div class="err" *ngIf="email.invalid && email.touched">
+    <div *ngIf="email.errors?.['required']">
+      Please enter an email address.
+    </div>
+    <div *ngIf="email.errors?.['pattern'] || email.errors?.['email']">
+      Please enter a valid email address.
+    </div>
+  </div>
+</div>
+
+
+          <div class="form-group">
+    <label for="phone"></label>
+    <input
+      id="phone"
+      name="phone"
+      type="tel"
+      required
+      pattern="^[0-9\-\+\s\(\)]*$"
+      [(ngModel)]="model.phone"
+      #phone="ngModel"
+      placeholder="Phone Number *"
+    />
+    <div class="err" *ngIf="phone.invalid && phone.touched">
+      Please enter a telephone number.
+    </div>
+  </div>
+
+            <div class="form-group">
+              <label for="message"></label>
+              <textarea
+                id="message"
+                name="message"
+                rows="2"
+                
+                [(ngModel)]="model.message"
+                #message="ngModel"
+              placeholder="Type Your Message..."
+              ></textarea>
+              <div class="err" *ngIf="message.invalid && message.touched">
+                Please fill out this field.
+              </div>
+            </div>
+
+            <button class="btn-send" type="submit">Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="contact-section">
+  <div class="overlay"></div>
+
+  <div class="container">
+    <h1 class="title">Contact Us</h1>
+    <p class="subtitle">
+      Understand, guide, implement. That’s what our IT experts do best, and they’re standing by to create your tailor-made solution.
+    </p>
+
+    <div class="content">
+    
+      <div class="left">
+        <div class="contact-item">
+          <div class="icon"><img src="assets/add.jpg" alt="location" width="25" height="30"></div>
+          <div class="info">
+            <h4>Address</h4>
+            <p>Kavindapadi,<br/>Erode - 638455<br>     </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="icon"><img src="assets/phone.png" alt="location" width="25" height="25"></div>
+          <div class="info">
+            <h4>Phone</h4>
+            <p>7373277998,<br>8508709483</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="icon"><img src="assets/11.jpg" alt="location" width="38" height="38" ></div>
+          <div class="info">
+            <h4>Email</h4>
+            <p>blivtech.ss@gmail.com</p>
           </div>
         </div>
       </div>
@@ -130,6 +275,8 @@
     </div>
   </div>
 </section>
+
+
 
 
 
